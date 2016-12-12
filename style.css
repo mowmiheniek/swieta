@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+}
+.contener {
+    margin: 0 auto;
+    width: 320px;
+    height: 400px;
+    overflow: hidden;
+}
+.zyczenia {
+    position: relative;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    margin-left: -40px;
+    padding-left: 64px;
+    width: 280px;
+    border-left: 10px solid black;
+}
+.okno {
+    position: absolute;
+    z-index: 2;
+    margin-top: -6px;
+    border-left: 33px solid black;
+    border-right: 25px solid black;
+    margin-left: -33px;
+}
+pre {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+}
+.snieg, .snieg2 {
+    animation: pada 6s linear infinite;
+    position: relative;
+    overflow: hidden;
+    width: 280px;
+    z-index: 1;
+    top: -250px;
+}
+.snieg{
+    top:-250px;
+}
+.snieg2 {
+    animation-delay: 3s;
+    top: -520px;
+}
+@keyframes pada {
+    0% {
+        transform: translate(-40px, 0);
+    }
+    100% {
+        transform: translate(0, 500px);
+    }
+}
+.czarna-zaslona {
+    position: absolute;
+    background-color: black;
+    z-index: 2;
+    top: 385px;
+    height: 290px;
+    width: 300px;
+    border-left: 33px solid black;
+    margin-left: -33px;
+    margin-top: -16px;
+}
+.scena1 {
+    animation: nastepna-scena 6s linear 6s 1;
+    animation-fill-mode: forwards;
+}
+@keyframes nastepna-scena {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-340px, 0);
+    }
+}
+.scena2 {
+    position: relative;
+    animation: nastepna-scena2 6s linear 8s 1;
+    animation-fill-mode: forwards;
+}
+.karp, .karp2, .karp3, .karp4 {
+    position: absolute;
+    z-index: 2;
+    top: -700px;
+    right: -319px;
+}
+.karp {
+    animation: klatka-animacji1 1ms linear 15.1s forwards 1;
+}
+.karp2 {
+    animation: klatka-animacji2 2s linear 15s forwards 1, klatka-animacji2 2s linear 19s forwards 1 ;
+    opacity: 0;
+}
+.karp3 {
+    animation: klatka-animacji3 2s linear 17s forwards 1, klatka-animacji3 2s linear 21s forwards 1;
+    opacity: 0;
+}
+.karp4 {
+    animation: klatka-animacji4 1ms linear 23s forwards 1;
+    opacity: 0;
+}
+@keyframes nastepna-scena2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-300px, 0);
+    }
+}
+@keyframes klatka-animacji1 {
+    0%, 100% {
+        opacity: 0;
+    }
+}
+@keyframes klatka-animacji2 {
+    0% {
+       opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes klatka-animacji3 {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes klatka-animacji4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
